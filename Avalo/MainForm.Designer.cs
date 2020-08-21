@@ -54,9 +54,8 @@
             // 
             // originPath
             // 
-            this.originPath.Enabled = false;
             this.originPath.Font = new System.Drawing.Font("BIZ UDPゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.originPath.Location = new System.Drawing.Point(161, 56);
+            this.originPath.Location = new System.Drawing.Point(161, 58);
             this.originPath.Name = "originPath";
             this.originPath.Size = new System.Drawing.Size(448, 19);
             this.originPath.TabIndex = 5;
@@ -187,7 +186,7 @@
             this.fileExample.AutoSize = true;
             this.fileExample.Font = new System.Drawing.Font("BIZ UDPゴシック", 9F);
             this.fileExample.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fileExample.Location = new System.Drawing.Point(120, 296);
+            this.fileExample.Location = new System.Drawing.Point(93, 297);
             this.fileExample.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.fileExample.Name = "fileExample";
             this.fileExample.Size = new System.Drawing.Size(74, 12);
@@ -199,11 +198,11 @@
             this.fileExampleLabel.AutoSize = true;
             this.fileExampleLabel.Font = new System.Drawing.Font("BIZ UDPゴシック", 11F);
             this.fileExampleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fileExampleLabel.Location = new System.Drawing.Point(26, 295);
+            this.fileExampleLabel.Location = new System.Drawing.Point(57, 295);
             this.fileExampleLabel.Name = "fileExampleLabel";
-            this.fileExampleLabel.Size = new System.Drawing.Size(98, 15);
+            this.fileExampleLabel.Size = new System.Drawing.Size(30, 15);
             this.fileExampleLabel.TabIndex = 17;
-            this.fileExampleLabel.Text = "ファイル名例：";
+            this.fileExampleLabel.Text = "例：";
             // 
             // MainForm
             // 
