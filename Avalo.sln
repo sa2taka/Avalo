@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalo", "Avalo\Avalo.csproj", "{67EDC0E3-2632-4645-9498-41182DFC511D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloTests", "AvaloTests\AvaloTests.csproj", "{21FF56BD-F918-492F-BA7E-6D567557DC7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67EDC0E3-2632-4645-9498-41182DFC511D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67EDC0E3-2632-4645-9498-41182DFC511D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67EDC0E3-2632-4645-9498-41182DFC511D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67EDC0E3-2632-4645-9498-41182DFC511D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FF56BD-F918-492F-BA7E-6D567557DC7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FF56BD-F918-492F-BA7E-6D567557DC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FF56BD-F918-492F-BA7E-6D567557DC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FF56BD-F918-492F-BA7E-6D567557DC7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73F5D561-13BF-43CA-A311-AF03A310918F}
+	EndGlobalSection
+EndGlobal
