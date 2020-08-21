@@ -9,20 +9,24 @@ using System.Windows.Forms;
 namespace Avalo {
     class Capture {
         /// <summary>
-        /// プライマリスクリーンの画像を取得する
+        /// 画面全体の画像を取得する
         /// </summary>
-        /// <returns>プライマリスクリーンの画像</returns>
+        /// <returns>画面全体の画像</returns>
         public static Bitmap CaptureScreen() {
             int left = SystemInformation.VirtualScreen.Left;
             int top = SystemInformation.VirtualScreen.Top;
             int width = SystemInformation.VirtualScreen.Width;
             int hight = SystemInformation.VirtualScreen.Height;
 
+            IntPtr disDC = GetDC(IntPtr.Zero);
+
             Bitmap bmp;
             Rectangle rect = new Rectangle(left, top, width, hight);
             bmp = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
             using (var g = Graphics.FromImage(bmp)) {
-                g.CopyFromScreen(rect.X, rect.Y, 0, 0, rect.Size, CopyPixelOperation.SourceCopy);
+                IntPtr hDC = g.GetHdc();
+                BitBlt(hDC, 0, 0, bmp.Width, bmp.Height, disDC, left, top, SRCCOPY);
+                g.ReleaseHdc(hDC);
             }
 
             return bmp;
@@ -33,7 +37,6 @@ namespace Avalo {
         /// </summary>
         /// <returns>アクティブなウィンドウの画像</returns>
         public static Bitmap CaptureActiveWindow() {
-            //アクティブなウィンドウのデバイスコンテキストを取得
             IntPtr hWnd = GetForegroundWindow();
             IntPtr disDC = GetDC(IntPtr.Zero);
 
@@ -43,14 +46,11 @@ namespace Avalo {
                 out var bounds,
                 Marshal.SizeOf(typeof(RECT)));
 
-            Bitmap bmp = new Bitmap(bounds.right - bounds.left , bounds.bottom - bounds.top );
+            Bitmap bmp = new Bitmap(bounds.right - bounds.left , bounds.bottom - bounds.top, PixelFormat.Format32bppArgb);
 
-            //Graphicsの作成g
             using (var g = Graphics.FromImage(bmp)) {
-                //Graphicsのデバイスコンテキストを取得
                 IntPtr hDC = g.GetHdc();
                 BitBlt(hDC, 0, 0, bmp.Width , bmp.Height , disDC, bounds.left , bounds.top, SRCCOPY);
-                //解放
                 g.ReleaseHdc(hDC);
             }
 

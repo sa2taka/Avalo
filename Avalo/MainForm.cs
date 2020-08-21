@@ -53,12 +53,17 @@ namespace Avalo {
             }
         }
 
-        private void folderNameRule_KeyUp(object sender, KeyEventArgs e) {
+        private void originPath_TextChanged(object sender, EventArgs e) {
+            CaptureManager.path = originPath.Text;
+            updateExamplePath();
+        }
+
+        private void folderNameRule_TextChanged(object sender, EventArgs e) {
             CaptureManager.directoryNameRule = folderNameRule.Text;
             updateExamplePath();
         }
 
-        private void fileNameRule_KeyUp(object sender, KeyEventArgs e) {
+        private void fileNameRule_TextChanged(object sender, EventArgs e) {
             CaptureManager.fileNameRule = fileNameRule.Text;
             updateExamplePath();
         }
@@ -66,5 +71,6 @@ namespace Avalo {
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e) {
             CaptureManager.save();
         }
+
     }
 }

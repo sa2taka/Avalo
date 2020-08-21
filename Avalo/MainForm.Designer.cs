@@ -58,10 +58,10 @@
             this.originPath.Font = new System.Drawing.Font("BIZ UDPゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.originPath.Location = new System.Drawing.Point(161, 56);
             this.originPath.Name = "originPath";
-            this.originPath.ReadOnly = true;
             this.originPath.Size = new System.Drawing.Size(448, 19);
             this.originPath.TabIndex = 5;
             this.originPath.TabStop = false;
+            this.originPath.TextChanged += new System.EventHandler(this.originPath_TextChanged);
             // 
             // originPathButton
             // 
@@ -95,7 +95,7 @@
             this.folderNameRule.Size = new System.Drawing.Size(556, 19);
             this.folderNameRule.TabIndex = 8;
             this.folderNameRule.TabStop = false;
-            this.folderNameRule.KeyUp += new System.Windows.Forms.KeyEventHandler(this.folderNameRule_KeyUp);
+            this.folderNameRule.TextChanged += new System.EventHandler(this.folderNameRule_TextChanged);
             // 
             // folderNameRuleExplainLabel
             // 
@@ -127,7 +127,7 @@
             this.fileNameRule.Size = new System.Drawing.Size(556, 19);
             this.fileNameRule.TabIndex = 11;
             this.fileNameRule.TabStop = false;
-            this.fileNameRule.KeyUp += new System.Windows.Forms.KeyEventHandler(this.fileNameRule_KeyUp);
+            this.fileNameRule.TextChanged += new System.EventHandler(this.fileNameRule_TextChanged);
             // 
             // materialLabel1
             // 
